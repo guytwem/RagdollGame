@@ -12,6 +12,11 @@ public class Drag : MonoBehaviour
     Vector3 orginalPosition;
     float selectionDistance;
 
+    private void Start()
+    {
+        dragObject = GetComponent<Rigidbody>();
+    }
+
     private void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

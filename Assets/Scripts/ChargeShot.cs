@@ -24,13 +24,29 @@ public class ChargeShot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.anyKey)
         {
             totalCharge += chargeMultiplier;
         }
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.UpArrow))
         {
             rb.AddForce(transform.right * totalCharge);
+            totalCharge = 0f;
+        }
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            rb.AddForce(transform.forward * totalCharge);
+            totalCharge = 0f;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            rb.AddForce(transform.right *- totalCharge);
+            totalCharge = 0f;
+        }
+        if (Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            rb.AddForce(transform.forward *- totalCharge);
+            totalCharge = 0f;
         }
         Debug.Log(totalCharge);
     }
