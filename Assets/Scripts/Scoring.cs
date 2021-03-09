@@ -10,17 +10,15 @@ public class Scoring : MonoBehaviour
     [SerializeField]
     private float scoreMultiplier;
     private float currentScore = 0;
-    private float currentPoints = 0;
+   
     
 
-    [SerializeField]
-    private float pointsPerHoop = 3f;
+    
 
     [SerializeField]
     private TMP_Text scoreText;
 
-    [SerializeField]
-    private TMP_Text pointsText;
+    
 
     public GameObject player;
 
@@ -50,20 +48,9 @@ public class Scoring : MonoBehaviour
         }
         //Debug.Log(forceBeingApplied);
 
-        if(currentPoints > 0)
-        {
-            pointsText.text = currentPoints.ToString();
-        }
+        
         
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Hoop")
-        {
-            Debug.Log("Collision");
-            currentPoints += pointsPerHoop;
-        }
-
-    }
+  
 }
