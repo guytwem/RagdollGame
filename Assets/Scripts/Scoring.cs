@@ -9,7 +9,7 @@ public class Scoring : MonoBehaviour
     private float minForceForScore;
     [SerializeField]
     private float scoreMultiplier;
-    private float currentScore = 0;
+    public float currentScore = 0;
    
     
 
@@ -46,7 +46,7 @@ public class Scoring : MonoBehaviour
             currentScore += (forceBeingApplied * scoreMultiplier * Time.deltaTime);
             scoreText.text = currentScore.ToString();
         }
-        //Debug.Log(forceBeingApplied);
+        Debug.Log(forceBeingApplied);
 
         
         
