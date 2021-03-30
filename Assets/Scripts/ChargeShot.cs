@@ -26,28 +26,15 @@ public class ChargeShot : MonoBehaviour
     {
         if (Input.anyKey)
         {
-            totalCharge += chargeMultiplier;
+            totalCharge += chargeMultiplier * 1;
         }
-        if (Input.GetKeyUp(KeyCode.UpArrow))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
-            rb.AddForce(transform.right * totalCharge);
-            totalCharge = 0f;
-        }
-        if (Input.GetKeyUp(KeyCode.RightArrow))
-        {
+
             rb.AddForce(transform.forward * totalCharge);
             totalCharge = 0f;
         }
-        if (Input.GetKeyUp(KeyCode.LeftArrow))
-        {
-            rb.AddForce(transform.right *- totalCharge);
-            totalCharge = 0f;
-        }
-        if (Input.GetKeyUp(KeyCode.DownArrow))
-        {
-            rb.AddForce(transform.forward *- totalCharge);
-            totalCharge = 0f;
-        }
+       
         Debug.Log(totalCharge);
     }
 }

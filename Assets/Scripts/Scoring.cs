@@ -26,7 +26,7 @@ public class Scoring : MonoBehaviour
     void Start()
     {
         joints = new List<Joint>(GetComponentsInChildren<Joint>());
-
+        currentScore = 0;
         
     }
 
@@ -43,7 +43,7 @@ public class Scoring : MonoBehaviour
         if(forceBeingApplied > minForceForScore)
         {
 
-            currentScore += (forceBeingApplied * scoreMultiplier * Time.deltaTime);
+            currentScore += (forceBeingApplied * scoreMultiplier);
             scoreText.text = currentScore.ToString();
         }
         Debug.Log(forceBeingApplied);

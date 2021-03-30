@@ -11,5 +11,11 @@ public class MainMenu : MonoBehaviour
 
     }
 
- 
+    public void StartProBuilder() 
+    {
+        SceneManager.LoadScene("ProBuilder");
+            
+            
+        }
+
 }

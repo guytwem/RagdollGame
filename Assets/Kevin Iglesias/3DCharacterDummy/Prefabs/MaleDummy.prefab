@@ -2720,6 +2720,7 @@ GameObject:
   - component: {fileID: 8654250720420943610}
   - component: {fileID: 8654250720411597152}
   - component: {fileID: 3556525875892091192}
+  - component: {fileID: 6338059020414401429}
   m_Layer: 0
   m_Name: MaleDummy
   m_TagString: Untagged
@@ -2774,10 +2775,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0d05b07b9ceb944c957c0006e24b3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minForceForScore: 0.1
-  scoreMultiplier: 10
+  minForceForScore: 1
+  scoreMultiplier: 0.1
+  currentScore: 0
   scoreText: {fileID: 3542913397188370883, guid: 0e15b491f893ce442b7b433560e3c3bc, type: 3}
   player: {fileID: 8654250720420973338}
+--- !u!114 &6338059020414401429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8654250720420973338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4839dcaa6d625a946ba38a2c6680cd79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 8654250720420973280}
+  chargeMultiplier: 250
 --- !u!1 &8654250720420973342
 GameObject:
   m_ObjectHideFlags: 0
